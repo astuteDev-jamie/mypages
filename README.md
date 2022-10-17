@@ -1,1 +1,1 @@
-# mypages
+# docs
