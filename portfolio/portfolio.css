@@ -9,7 +9,8 @@
 body {
     /* height: 100vh; */
     box-sizing: border-box;
-    
+    background-color: rgb(38, 34, 41);
+    /* background-color: black; */
 }
 
 header{
@@ -29,15 +30,40 @@ nav {
 
 li {
     display: inline-block;
-    padding: 5px;
-    margin: 0px 10px;
+    padding: 4px;
+    margin: 0px 1px;
     list-style: none;
-    color: rgb(107, 122, 148);
-    border-bottom: 1px solid white;
+    color: rgb(235, 160, 235);
+    border-bottom: 1px solid rgb(54, 36, 70);
+   
+    transition: 
+        border-bottom 0.12s ease-in-out,
 }
 
-li:hover{
-    border-bottom: 1px solid blueviolet;
+li::before{
+    content: "<";
+    font-size: small;
+    font-weight: lighter;
+    visibility: hidden;
+}
+li::after{
+    content: " />";
+    font-size: small;
+    font-weight: lighter;
+    visibility: hidden;
+}
+
+li:hover {
+    color: white;
+}
+
+li:hover::before{
+    color: yellow;
+    visibility: visible;
+}
+li:hover::after{
+    color: yellow;
+    visibility: visible;
 }
 
 main {
@@ -53,7 +79,7 @@ main {
 .icons svg {
     padding: 6px;
     margin-top: 15px;
-    color: rgb(107, 122, 148);
+    color: yellow;
     display: block;
     animation: jumper 1s ease-in 3s infinite normal;
 }
@@ -65,12 +91,18 @@ main {
 }
 
 .content h1{
-    color: blueviolet;
+    color: transparent;
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, rgba(236, 215, 94, 0.897), rgb(245, 133, 245));
     font-size: 45px;
     font-weight: bolder;
+    display: inline-block;
 }
 p#info {
-    color: black;
+    color: white;
     padding: 10px 1px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
@@ -78,10 +110,11 @@ p#info {
 }
 
 p#CTA {
-    background-color: blueviolet;
+    background-color:deepskyblue;
+    /* background-color: rgba(50, 203, 254, 0.86); */
     padding: 8px 30px;
     margin-top: 25px;
-    color: white;
+    color: black;
     font-weight: lighter;
     font-size: medium;
     border-radius: 30px;
