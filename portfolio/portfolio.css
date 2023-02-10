@@ -10,6 +10,7 @@ body {
     /* height: 100vh; */
     box-sizing: border-box;
     background-color: rgb(38, 34, 41);
+    overflow: hidden;
     /* background-color: black; */
 }
 
@@ -77,11 +78,22 @@ main {
 }
 
 .icons svg {
+    position: relative;
     padding: 6px;
     margin-top: 15px;
     color: yellow;
     display: block;
-    animation: jumper 1s ease-in 3s infinite normal;
+    
+    /* animation-name: ;
+    animation-duration: ;
+    animation-timing-function: ;
+    animation-delay: ;
+    animation-iteration-count: ; */
+
+    animation: 
+        jumper 4s ease-in 15s infinite normal,
+        shaker 0.1s ease-in 10s infinite normal,
+        shaker2 2.5s linear 1s infinite normal;
 }
 
 .content {
@@ -122,22 +134,57 @@ p#CTA {
 }
 
 @keyframes jumper {
-    20%{
-        transform: translateY(-4px);
+
+    from{
+        transform: rotate(0deg);
+      }
+
+    12% {
+        opacity: 0;
     }
-    30%{
-        transform: translateY(-8px);
+
+    22%{
+        transform: translateY(480px);
+        
     }
-    50%{
-        transform: translateY(-12px);
+
+    30% {
+        transform: translateY(-480px);
+        opacity: 0;
     }
+   
+    59% {
+        opacity: 1;
+    }
+
     60%{
-        transform: translateY(0px);
+        transform: translateY(0px) rotate(29deg);
+        
     }
-    70%{
-        transform: translateY(-6px);
+
+  
+}
+
+@keyframes shaker {
+
+    from {
+       left: -4px;
     }
-    100%{
-        transform: translateY(0px);
+
+   
+    to {
+        left: 0px;
+  }
+}
+
+@keyframes shaker2 {
+
+    from {
+       top: -15px;
     }
+
+   
+    50% {
+        top: 0px;
+  }
 }
