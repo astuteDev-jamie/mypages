@@ -119,6 +119,20 @@ a#email {
     font-size: small;
     color: black;
     text-decoration: none;
+    position: relative;
+}
+
+a#email::after {
+    content: '';
+    background-color:rgb(122, 122, 122);
+    border: 1px solid rgb(122, 122, 122);
+    padding:10px 15px;
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    height: 15px;
+    width: 165px;
+    z-index: -1;
 }
 
 main {
@@ -184,13 +198,26 @@ p#info {
 
 p#CTA {
     background-color:skyblue;
-    /* background-color: rgba(50, 203, 254, 0.86); */
     padding: 8px 30px;
     margin-top: 25px;
     color: black;
     font-weight: lighter;
     font-size: medium;
     display: inline-block;
+    position: relative;
+}
+
+p#CTA::after {
+    content: "";
+    background-color:rgb(122, 122, 122);
+    border: 1px solid rgb(122, 122, 122);
+    width: 111.266px;
+    height: 19px;
+    top: 10%;
+    left: 3%;
+    padding: 8px 30px;
+    position: absolute;
+    z-index: -1;
 }
 
 @keyframes jumper { 
