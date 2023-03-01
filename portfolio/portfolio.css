@@ -7,19 +7,33 @@
 }
 
 body {
-    /* height: 100vh; */
+    height: 100vh;
     box-sizing: border-box;
     background-color: rgba(38, 24, 48, 0.961);
     overflow: hidden;
-    /* background-color: black; */
 }
 
 .logo {
     position: absolute;
 }
 
+.blogo {
+    position: absolute;
+    right: 80px;
+    bottom: 0px;
+}
+
 .design {
-    margin-left: 55px;
+    margin-left: 50px;
+    padding: 10px;
+    width: 25px;
+    height: 10px;
+    background-color: rgb(250, 190,0);
+    position: relative;
+}
+
+.bdesign {
+   
     padding: 10px;
     width: 25px;
     height: 10px;
@@ -32,10 +46,17 @@ body {
     position: absolute;
     top: 100%;
     left: 0px;
-    border-top: 35px solid green;
-    border-right: 5px solid transparent;
-   /* width: 250px;
-    height: 10px; */
+    border-top: 35px solid rgb(250, 190,0);
+    border-right: 45px solid transparent;
+}
+
+.bdesign::after {
+    content: '';
+    position: absolute;
+    top: calc(-100% - 5px);
+    right:0px;
+    border-bottom: 35px solid rgb(250, 190,0);
+    border-left: 45px solid transparent;
 }
 
 header{
@@ -58,7 +79,7 @@ li {
     padding: 4px;
     margin: 0px 1px;
     list-style: none;
-    color: rgb(200, 196, 0);
+    color: white;
     border-bottom: 1px solid rgb(54, 36, 70);
    
     transition: 
@@ -92,7 +113,7 @@ li:hover::after{
 }
 
 a#email {
-    background-color: deepskyblue;
+    background-color: skyblue;
     padding:10px 15px;
     font-weight: 100;
     font-size: small;
@@ -108,6 +129,7 @@ main {
 }
 
 .icons{
+    margin-top: 20px;
     padding: 10px;
 }
 
@@ -146,13 +168,14 @@ main {
     -o-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-    background-image: linear-gradient(to right, rgb(255, 190, 0), rgb(253, 253, 255));
+    background-image: linear-gradient(to right, white, rgb(253, 253, 255));
     font-size: 45px;
     font-weight: bolder;
     display: inline-block;
 }
 p#info {
-    color: white;
+    color: rgb(187, 187, 187);
+    width: 50%;
     padding: 10px 1px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
@@ -160,7 +183,7 @@ p#info {
 }
 
 p#CTA {
-    background-color:deepskyblue;
+    background-color:skyblue;
     /* background-color: rgba(50, 203, 254, 0.86); */
     padding: 8px 30px;
     margin-top: 25px;
