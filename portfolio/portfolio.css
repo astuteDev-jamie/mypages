@@ -6,7 +6,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-body {
+/* body {
     height: 100vh;
     box-sizing: border-box;
     background-color: rgba(38, 24, 48, 0.961);
@@ -145,9 +145,9 @@ main {
 .icons{
     margin-top: 20px;
     padding: 10px;
-}
+} */
 
-.icons svg {
+/*.icons svg {
     position: relative;
     padding: 6px;
     margin-top: 15px;
@@ -156,9 +156,9 @@ main {
     animation: 
         jumper 4.5s linear 0s normal
         /* shaker 0.1s ease-in 10s infinite normal,
-        shaker2 2.5s linear 1s infinite normal; */
-}
-.icons svg#twitter {
+        shaker2 2.5s linear 1s infinite normal; 
+}*/
+/*.icons svg#twitter {
     position: relative;
     padding: 6px;
     margin-top: 15px;
@@ -167,10 +167,10 @@ main {
     animation: 
         jumper1 4.5s linear 1s normal
         /* shaker 0.1s ease-in 10s infinite normal,
-        shaker2 2.5s linear 1s infinite normal; */
-}
+        shaker2 2.5s linear 1s infinite normal; 
+}*/
 
-.content {
+/* .content {
     padding :10px;
     margin: 10px 50px;
 
@@ -281,4 +281,4 @@ p#CTA::after {
     50% {
         top: 0px;
   }
-}
+} */
